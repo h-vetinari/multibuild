@@ -23,6 +23,8 @@ function before_install {
     source venv/bin/activate
     python --version # just to check
     pip install --upgrade pip wheel
+
+    echo "Using C compiler: $(gcc --version) from $(which gcc)"
 }
 
 function build_wheel {

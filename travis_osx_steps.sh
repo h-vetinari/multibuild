@@ -40,6 +40,8 @@ function before_install {
     get_macpython_environment $MB_PYTHON_VERSION venv
     source venv/bin/activate
     pip install --upgrade pip wheel
+
+    echo "Using C compiler: $(clang --version) from $(which clang)"
 }
 
 # build_wheel function defined in common_utils (via osx_utils)
